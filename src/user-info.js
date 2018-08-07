@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const UserInfo = ({ userinfo }) => (
     <section className='user-info'>
-      <img src={userinfo.photo} alt='User' />
+      <img src={userinfo.photo} alt='Foto do Usuário' />
       <h1>
           <a href={`http://github.com/${userinfo.login}`}>
             {userinfo.username}
@@ -27,4 +27,5 @@ UserInfo.propTypes = {
         following: PropTypes.number.isRequired
     })
 }
+
 export default UserInfo
