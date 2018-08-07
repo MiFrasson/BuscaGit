@@ -12,7 +12,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div className="post-form">
+      <div className="post-form" role="form">
         <form onSubmit={this.handleSubmit}>
           <label>
 		  <div className="Form-acessibilidade" id="1"> Faça sua busca, abaixo, aparecerá os resultados</div>
