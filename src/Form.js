@@ -22,7 +22,7 @@ class Form extends React.Component {
           <button className="button">Faça sua busca</button>
         </form>
       </div>
-    );
+    )
   }
 }
 

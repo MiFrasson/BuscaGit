@@ -29,7 +29,7 @@ class App extends Component {
 						var user = JSON.parse(ajax.responseText);
 						this.setState( {
 							userinfo: {
-								user.name,
+								username: user.name,
 								photo: user.avatar_url,
 								login: user.login,
 								repos: user.public_repos,
@@ -37,14 +37,13 @@ class App extends Component {
 								following: user.following
 							}
 							repos: [],
-							starred: []
+							starred: [],
 							})
 							this.setState({isFetching: false})
 							}
 							catch(e) {
 								this.setState({isFetching: false})
 							}
-				}
 				}.bind(this));
 							function isRequestOk() {
 								return ajax.readyState === 4 && ajax.status === 200;
@@ -69,7 +68,9 @@ class App extends Component {
 								}
 								})
 								})
-					}
+					} catch(e)
+				}
+				}.bind(this));
 					function isRequestOk() {
 						return ajax.readyState === 4 && ajax.status === 200;
 					}
