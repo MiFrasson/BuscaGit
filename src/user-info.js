@@ -1,20 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './user-info.css';
+
 
 const UserInfo = ({ userinfo }) => (
-    <section className='user-info'>
+	      <div className='user-info'>
+	<div className='img' role="banner">
       <img src={userinfo.photo} alt='Foto do Usuário' />
+	  </div>
+	  <div role="complementary">
       <h1>
           <a href={`http://github.com/${userinfo.login}`}>
             {userinfo.username}
           </a>
       </h1>
       <ul className='repos-info'>
-          <li>Repositórios: {userinfo.repos}</li>
-          <li>Seguidores: {userinfo.followers}</li>
-          <li>Seguindo: {userinfo.following}</li>
+          <li  tabindex="0">Repositórios: {userinfo.repos}</li>
+          <li  tabindex="0">Seguidores: {userinfo.followers}</li>
+          <li  tabindex="0">Seguindo: {userinfo.following}</li>
       </ul>
-    </section>
+	  </div>
+    </div>
+
+
 )
 
 UserInfo.propTypes = {
