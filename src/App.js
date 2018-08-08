@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Search from './search'
+import Search from './search';
 import AppContent from './app-content';
+import UserInfo from './user-info';
+
 
 class App extends Component {
 	constructor () {
 		super()
 		this.state = {
-			userinfo: null,
+			userinfo: {},
 			repos: [],
 			starred: [],
 			isFetching: false
 			}
 	}
-	handleSearch (e) {
+	handleSearch = (e) => {
 		const value = e.target.value;
 		const keyCode = e.which || e.keyCode;
 		const ENTER = 13;
@@ -82,6 +84,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+	  <UserInfo userinfo={this.state.userinfo}/>
+	  <Search handleSearch={this.handleSearch} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="Logo do ReactJS" />
           <h1 className="App-title">Bem-vindo ao Busca Git!</h1>
