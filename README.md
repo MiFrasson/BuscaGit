@@ -1,7 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Este projeto foi feito com create react app.
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Esta aplicação é uma busca do Git, feita em React, seguindo padrões web de acessibilidade (W3C, WCAG).</br>
 
 ## Table of Contents
 

@@ -35,7 +35,7 @@ class App extends Component {
 								repos: user.public_repos,
 								followers: user.followers,
 								following: user.following
-							}
+							},
 							repos: [],
 							starred: [],
 							})
@@ -44,6 +44,7 @@ class App extends Component {
 							catch(e) {
 								this.setState({isFetching: false})
 							}
+				}
 				}.bind(this));
 							function isRequestOk() {
 								return ajax.readyState === 4 && ajax.status === 200;
@@ -74,14 +75,14 @@ class App extends Component {
 					function isRequestOk() {
 						return ajax.readyState === 4 && ajax.status === 200;
 					}
-				}
-			}
-			
+		}
+	}
+}
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="Foto-desenvolvedora" />
+          <img src={logo} className="App-logo" alt="Logo do ReactJS" />
           <h1 className="App-title">Bem-vindo ao Busca Git!</h1>
         </header>
         <p className="App-intro" role="main">
