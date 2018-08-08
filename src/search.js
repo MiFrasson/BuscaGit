@@ -8,9 +8,9 @@ const Search = ({ isDisabled, handleSearch, handleClick, updateInputValue }) => 
           <label>
 		  <div className="Form-acessibilidade" id="1"> Faça sua busca, abaixo, aparecerá os resultados</div>
             Busca:
-            <input type="search" aria-labelledby="1" onKeyUp={handleSearch} onChange={updateInputValue}/>
+            <input id="formulario" accesskey="s" type="search" aria-labelledby="1" onKeyUp={handleSearch} onChange={updateInputValue}/>
           </label>
-          <button className="button-busca" disabled={isDisabled} onClick={handleClick}>Faça sua busca</button>
+          <button accesskey="v" className="button-busca" disabled={isDisabled} onClick={handleClick}>Faça sua busca</button>
       </div>
     )
 	Search.propTypes = {

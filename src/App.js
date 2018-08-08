@@ -99,15 +99,20 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Bem-vindo ao Busca Git!</h1>
+          <h1 id="inicio" className="App-title">Bem-vindo ao Busca Git!</h1>
         </header>
+		<nav>
+		<a name="Form" href="#formulario"> Ir para formulário </a>
+		<a name="Fim" href="#FimSite"> Ir para Rodapé </a>
+		</nav>
         <p className="App-intro" role="main">
           Aqui você poderá procurar perfis de usuários do GitHub, no campo que estará localizado logo abaixo
 		  </p>
 		  <Search isDisabled={false} handleSearch={this.handleSearch} handleClick={this.handleClick} updateInputValue={this.updateInputValue}/>
 		  {this.state.isContentLoaded && <UserInfo userinfo={this.state.userinfo}/>}
-		<footer className="App-header">
+		<footer className="App-header" id="FimSite">
 		Desenvolvido por Mi Frasson
+		<a name="inicio" href="#inicio"> Ir para o início do site </a>
 		</footer>
       </div>
     );

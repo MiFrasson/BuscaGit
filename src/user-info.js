@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './user-info.css';
 
 
 const UserInfo = ({ userinfo }) => (
@@ -10,7 +9,7 @@ const UserInfo = ({ userinfo }) => (
 	  </div>
 	  <div role="complementary">
       <h1>
-          <a href={`http://github.com/${userinfo.login}`}>
+          <a title="Abre página externa" target="blanck" href={`http://github.com/${userinfo.login}`}>
             {userinfo.username}
           </a>
       </h1>
