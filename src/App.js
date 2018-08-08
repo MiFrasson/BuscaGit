@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import search from './search'
+import Search from './search'
 import AppContent from './app-content';
 
 class App extends Component {
@@ -89,7 +89,7 @@ class App extends Component {
         <p className="App-intro" role="main">
           Aqui você poderá procurar perfis de usuários do GitHub, no campo que estará localizado logo abaixo
 		  </p>
-		  <search />
+		  <Search />
 		<footer className="App-header">
 		Desenvolvido por Mi Frasson
 		</footer>

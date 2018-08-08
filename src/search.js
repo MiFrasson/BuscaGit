@@ -1,29 +1,21 @@
 import React from 'react'
 import './search.css';
-class search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleSubmit(event) {
-	  this.content.value = '';
-    event.preventDefault();
-  }
+import PropTypes from 'prop-types';
 
-  render() {
-    return (
-      <div className="post-form" role="form">
-        <form onSubmit={this.handleSubmit}>
+const Search = ({ isDisabled, handleSearch }) => (
+
+      <div className="search-form" role="form">
           <label>
 		  <div className="Form-acessibilidade" id="1"> Faça sua busca, abaixo, aparecerá os resultados</div>
             Busca:
-            <input type="search" ref={(input) => this.content = input} aria-labelledby="1"/>
+            <input type="search" aria-labelledby="1"/>
           </label>
-          <button className="button">Faça sua busca</button>
-        </form>
+          <button className="button" disabled={isDisabled} onKeyUp={handleSearch}>Faça sua busca</button>
       </div>
     )
-  }
+	Search.propTypes = {
+    handleSearch: PropTypes.func.isRequired,
+    isDisabled: PropTypes.bool.isRequired
 }
 
-export default search
+export default Search
