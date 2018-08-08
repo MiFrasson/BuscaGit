@@ -69,7 +69,9 @@ class App extends Component {
 								}
 								})
 								})
-					} catch(e)
+					} catch(e) {
+						console.log(e);
+					}
 				}
 				}.bind(this));
 					function isRequestOk() {
@@ -77,7 +79,6 @@ class App extends Component {
 					}
 		}
 	}
-}
   render() {
     return (
       <div className="App">
