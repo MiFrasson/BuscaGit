@@ -8,14 +8,13 @@ const Search = ({ isDisabled, handleSearch }) => (
           <label>
 		  <div className="Form-acessibilidade" id="1"> Faça sua busca, abaixo, aparecerá os resultados</div>
             Busca:
-            <input type="search" aria-labelledby="1"/>
+            <input type="search" aria-labelledby="1" onKeyUp={handleSearch}/>
           </label>
-          <button className="button" disabled={isDisabled} onKeyUp={handleSearch}>Faça sua busca</button>
+          <button className="button" disabled={isDisabled}>Faça sua busca</button>
       </div>
     )
 	Search.propTypes = {
-    handleSearch: PropTypes.func.isRequired,
-    isDisabled: PropTypes.bool.isRequired
+    handleSearch: PropTypes.func.isRequired
 }
 
 export default Search
